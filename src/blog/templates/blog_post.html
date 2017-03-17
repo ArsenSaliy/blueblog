@@ -2,12 +2,12 @@
 
 {% block content %}
 
-<h1>Blog Settings</h1>
+<h1>{% if object %}Edit{% else %}Create{% endif %}Blog Post</h1>
+
 <form action="" method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
-	
-	<input type="submit" name="Submit" />
+	<input type="submit" value="Submit" />
 </form>
 
 {% endblock %}
